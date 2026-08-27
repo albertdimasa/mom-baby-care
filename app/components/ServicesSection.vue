@@ -1,59 +1,59 @@
 <template>
-  <main id="services" class="max-w-6xl mx-auto px-4 sm:px-6 py-12 space-y-10">
+  <main id="services" class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 space-y-8 sm:space-y-10">
     <!-- Section Title Header -->
-    <div class="text-center space-y-3">
-      <span class="bg-pink-200/70 text-[#c2185b] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest border border-pink-300">
+    <div class="text-center space-y-2 sm:space-y-3">
+      <span class="bg-pink-200/70 text-[#c2185b] text-[11px] sm:text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-widest border border-pink-300">
         Daftar Harga & Perawatan
       </span>
-      <h2 class="font-luxury text-3xl sm:text-4xl lg:text-5xl font-bold text-[#c2185b]">
+      <h2 class="font-luxury text-2xl sm:text-4xl lg:text-5xl font-bold text-[#c2185b]">
         Pilih Layanan Terbaik
       </h2>
-      <p class="text-sm sm:text-base text-gray-600 font-medium max-w-xl mx-auto">
+      <p class="text-xs sm:text-base text-gray-600 font-medium max-w-xl mx-auto px-2">
         Dirancang khusus untuk menjaga kesehatan, relaksasi, dan kebahagiaan Bunda dan buah hati.
       </p>
     </div>
 
     <!-- Layout Columns -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-start">
       <!-- BABY CARE COLUMN -->
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-pink-200/80 space-y-6">
-        <div class="flex items-center space-x-3 border-b border-pink-100 pb-4">
-          <span class="text-3xl p-3 bg-pink-100 rounded-2xl shadow-inner">👶</span>
+      <div class="bg-white rounded-3xl p-5 sm:p-8 shadow-md border border-pink-200/80 space-y-5 sm:space-y-6">
+        <div class="flex items-center space-x-3 border-b border-pink-100 pb-3.5">
+          <span class="text-2xl sm:text-3xl p-2.5 sm:p-3 bg-pink-100 rounded-2xl shadow-inner">👶</span>
           <div>
-            <h3 class="font-luxury font-bold text-2xl text-[#c2185b]">Baby Care</h3>
-            <p class="text-xs text-gray-500 font-medium">Stimulasi & tumbuh kembang bayi</p>
+            <h3 class="font-luxury font-bold text-xl sm:text-2xl text-[#c2185b]">Baby Care</h3>
+            <p class="text-[11px] sm:text-xs text-gray-500 font-medium">Stimulasi & tumbuh kembang bayi</p>
           </div>
         </div>
 
-        <div class="space-y-4">
+        <div class="space-y-3 sm:space-y-4">
           <div
             v-for="item in BABY_SERVICES"
             :key="item.id"
             :class="[
-              'p-4 rounded-2xl transition border flex justify-between items-center',
+              'p-3 sm:p-4 rounded-2xl transition border flex justify-between items-center gap-2',
               item.isNew
                 ? 'bg-pink-50/90 border-pink-300'
                 : 'bg-gradient-to-r from-pink-50/40 to-white hover:bg-pink-50/80 border-pink-100'
             ]"
           >
-            <div>
-              <div class="flex items-center space-x-2">
-                <h4 class="font-semibold text-sm text-gray-800">{{ item.name }}</h4>
+            <div class="min-w-0">
+              <div class="flex items-center space-x-1.5 flex-wrap">
+                <h4 class="font-semibold text-xs sm:text-sm text-gray-800">{{ item.name }}</h4>
                 <span
                   v-if="item.isNew"
-                  class="bg-[#c2185b] text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold animate-pulse"
+                  class="bg-[#c2185b] text-white text-[9px] px-2 py-0.5 rounded-full font-bold animate-pulse"
                 >
                   BARU!
                 </span>
               </div>
-              <p v-if="item.subtitle" class="text-xs text-gray-500 font-medium mt-0.5">{{ item.subtitle }}</p>
+              <p v-if="item.subtitle" class="text-[11px] text-gray-500 font-medium mt-0.5">{{ item.subtitle }}</p>
             </div>
-            <div class="flex items-center space-x-3 shrink-0">
-              <span class="font-bold text-[#c2185b] text-sm">{{ item.priceDisplay }}</span>
+            <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
+              <span class="font-bold text-[#c2185b] text-xs sm:text-sm">{{ item.priceDisplay }}</span>
               <button
                 @click="handleAddToCart(item)"
                 :class="[
-                  'px-3.5 py-1.5 rounded-xl text-xs font-bold transition shadow-xs cursor-pointer',
+                  'px-3 py-1.5 rounded-xl text-xs font-bold transition shadow-xs cursor-pointer',
                   item.isNew
                     ? 'bg-[#c2185b] text-white hover:bg-pink-700'
                     : 'bg-pink-100 text-[#c2185b] hover:bg-[#c2185b] hover:text-white'
@@ -67,30 +67,30 @@
       </div>
 
       <!-- KIDS CARE COLUMN -->
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-pink-200/80 space-y-6">
-        <div class="flex items-center space-x-3 border-b border-pink-100 pb-4">
-          <span class="text-3xl p-3 bg-pink-100 rounded-2xl shadow-inner">👧</span>
+      <div class="bg-white rounded-3xl p-5 sm:p-8 shadow-md border border-pink-200/80 space-y-5 sm:space-y-6">
+        <div class="flex items-center space-x-3 border-b border-pink-100 pb-3.5">
+          <span class="text-2xl sm:text-3xl p-2.5 sm:p-3 bg-pink-100 rounded-2xl shadow-inner">👧</span>
           <div>
-            <h3 class="font-luxury font-bold text-2xl text-[#c2185b]">Kids Care</h3>
-            <p class="text-xs text-gray-500 font-medium">Perawatan relaksasi anak usia dini</p>
+            <h3 class="font-luxury font-bold text-xl sm:text-2xl text-[#c2185b]">Kids Care</h3>
+            <p class="text-[11px] sm:text-xs text-gray-500 font-medium">Perawatan relaksasi anak usia dini</p>
           </div>
         </div>
 
-        <div class="space-y-4">
+        <div class="space-y-3 sm:space-y-4">
           <div
             v-for="item in KIDS_SERVICES"
             :key="item.id"
-            class="p-4 rounded-2xl bg-gradient-to-r from-pink-50/40 to-white hover:bg-pink-50/80 transition border border-pink-100 flex justify-between items-center"
+            class="p-3 sm:p-4 rounded-2xl bg-gradient-to-r from-pink-50/40 to-white hover:bg-pink-50/80 transition border border-pink-100 flex justify-between items-center gap-2"
           >
-            <div>
-              <h4 class="font-semibold text-sm text-gray-800">{{ item.name }}</h4>
-              <p v-if="item.subtitle" class="text-xs text-gray-500 font-medium mt-0.5">{{ item.subtitle }}</p>
+            <div class="min-w-0">
+              <h4 class="font-semibold text-xs sm:text-sm text-gray-800">{{ item.name }}</h4>
+              <p v-if="item.subtitle" class="text-[11px] text-gray-500 font-medium mt-0.5">{{ item.subtitle }}</p>
             </div>
-            <div class="flex items-center space-x-3 shrink-0">
-              <span class="font-bold text-[#c2185b] text-sm">{{ item.priceDisplay }}</span>
+            <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
+              <span class="font-bold text-[#c2185b] text-xs sm:text-sm">{{ item.priceDisplay }}</span>
               <button
                 @click="handleAddToCart(item)"
-                class="bg-pink-100 text-[#c2185b] hover:bg-[#c2185b] hover:text-white px-3.5 py-1.5 rounded-xl text-xs font-bold transition shadow-xs cursor-pointer"
+                class="bg-pink-100 text-[#c2185b] hover:bg-[#c2185b] hover:text-white px-3 py-1.5 rounded-xl text-xs font-bold transition shadow-xs cursor-pointer"
               >
                 + Pilih
               </button>
@@ -98,34 +98,34 @@
           </div>
         </div>
 
-        <div class="p-4 bg-pink-50 rounded-2xl border border-pink-200 text-center">
+        <div class="p-3.5 bg-pink-50 rounded-2xl border border-pink-200 text-center">
           <p class="text-xs text-[#c2185b] font-semibold">💖 Layanan anak ditangani dengan sabar & kelembutan ekstra.</p>
         </div>
       </div>
 
       <!-- MOMMY CARE COLUMN -->
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-pink-200/80 space-y-6">
-        <div class="flex items-center space-x-3 border-b border-pink-100 pb-4">
-          <span class="text-3xl p-3 bg-pink-100 rounded-2xl shadow-inner">👩</span>
+      <div class="bg-white rounded-3xl p-5 sm:p-8 shadow-md border border-pink-200/80 space-y-5 sm:space-y-6">
+        <div class="flex items-center space-x-3 border-b border-pink-100 pb-3.5">
+          <span class="text-2xl sm:text-3xl p-2.5 sm:p-3 bg-pink-100 rounded-2xl shadow-inner">👩</span>
           <div>
-            <h3 class="font-luxury font-bold text-2xl text-[#c2185b]">Mommy Care</h3>
-            <p class="text-xs text-gray-500 font-medium">Prenatal, Nifas & Terapi Laktasi</p>
+            <h3 class="font-luxury font-bold text-xl sm:text-2xl text-[#c2185b]">Mommy Care</h3>
+            <p class="text-[11px] sm:text-xs text-gray-500 font-medium">Prenatal, Nifas & Terapi Laktasi</p>
           </div>
         </div>
 
-        <div class="space-y-3">
+        <div class="space-y-2.5 sm:space-y-3">
           <div
             v-for="item in MOM_SERVICES"
             :key="item.id"
             :class="[
-              'p-3 rounded-2xl transition border flex justify-between items-center',
+              'p-2.5 sm:p-3 rounded-2xl transition border flex justify-between items-center gap-2',
               item.isNew
                 ? 'bg-pink-50/90 border-pink-300'
                 : 'hover:bg-pink-50/60 border-transparent hover:border-pink-100'
             ]"
           >
-            <div>
-              <div class="flex items-center space-x-2">
+            <div class="min-w-0">
+              <div class="flex items-center space-x-1.5 flex-wrap">
                 <h4 class="font-semibold text-xs sm:text-sm text-gray-800">{{ item.name }}</h4>
                 <span
                   v-if="item.isNew"
@@ -134,10 +134,10 @@
                   BARU!
                 </span>
               </div>
-              <p v-if="item.subtitle" class="text-xs text-gray-500 font-medium">{{ item.subtitle }}</p>
+              <p v-if="item.subtitle" class="text-[11px] text-gray-500 font-medium">{{ item.subtitle }}</p>
             </div>
             <div class="flex items-center space-x-2 shrink-0">
-              <span class="font-bold text-[#c2185b] text-sm">{{ item.priceDisplay }}</span>
+              <span class="font-bold text-[#c2185b] text-xs sm:text-sm">{{ item.priceDisplay }}</span>
               <button
                 @click="handleAddToCart(item)"
                 :class="[

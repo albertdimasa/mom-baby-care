@@ -4,8 +4,11 @@
       
       <!-- Section Header -->
       <div class="text-center space-y-2">
-        <span class="bg-[#c2185b] text-white text-[11px] sm:text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-widest shadow-xs">
-          🎁 Paket Hemat Spesial
+        <span class="inline-flex items-center space-x-1 bg-[#c2185b] text-white text-[11px] sm:text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-widest shadow-xs">
+          <svg class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V6a2 2 0 10-2 2h2zm9 1a2 2 0 012 2v1a2 2 0 01-2 2H3a2 2 0 01-2-2V11a2 2 0 012-2h18zM4 14h16v7a2 2 0 01-2 2H6a2 2 0 01-2-2v-7z" />
+          </svg>
+          <span>Paket Hemat Spesial</span>
         </span>
         <h2 class="font-luxury text-2xl sm:text-4xl lg:text-5xl font-bold text-[#c2185b]">
           Paket Perawatan Newborn
@@ -57,8 +60,9 @@
 
         <!-- 7 Hari Package (Featured) -->
         <div class="bg-gradient-to-b from-white via-pink-50/50 to-white rounded-3xl p-5 sm:p-8 border-2 border-[#c2185b] shadow-xl flex flex-col justify-between space-y-6 relative overflow-hidden group">
-          <div class="inline-block self-end bg-gradient-to-r from-[#c2185b] to-rose-600 text-white text-[10px] sm:text-xs font-extrabold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full uppercase tracking-wider shadow-sm">
-            🔥 REKOMENDASI UTAMA (7 HARI)
+          <div class="inline-flex items-center space-x-1.5 self-end bg-gradient-to-r from-[#c2185b] to-rose-600 text-white text-[10px] sm:text-xs font-extrabold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full uppercase tracking-wider shadow-sm">
+            <svg class="w-3.5 h-3.5 text-amber-300 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-1.048c-3.27 1.635-7.076 5.895-7.076 10.138 0 4.14 3.36 7.5 7.5 7.5s7.5-3.36 7.5-7.5c0-3.303-2.093-6.526-4.574-8.89.043.238.074.478.074.722 0 1.258-.62 2.37-1.574 3.064a.999.999 0 01-1.428-.415c-.471-.976-.471-2.31 0-3.571z" clip-rule="evenodd" /></svg>
+            <span>REKOMENDASI UTAMA (7 HARI)</span>
           </div>
           <div>
             <h3 class="font-luxury font-bold text-xl sm:text-2xl text-[#c2185b] mb-1">Paket Newborn 7 Hari</h3>

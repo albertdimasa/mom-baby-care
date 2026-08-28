@@ -10,7 +10,7 @@
       <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left">
         <!-- Eyebrow Badge -->
         <div class="inline-flex items-center space-x-2 bg-white/90 text-[#c2185b] text-[11px] sm:text-xs font-bold px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full uppercase tracking-wider border border-pink-200 shadow-xs">
-          <span>👑</span>
+          <img src="/favicon.png" alt="Logo" class="w-4 h-4 rounded-full inline-block border border-pink-200" />
           <span>Home Care & Spa Resmi 2026</span>
         </div>
 
@@ -27,8 +27,10 @@
         <!-- Highlights Row -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-left max-w-lg mx-auto lg:mx-0">
           <div class="bg-white/80 p-3 sm:p-3.5 rounded-2xl border border-pink-200/80 shadow-xs flex items-center space-x-3">
-            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-[#c2185b] to-rose-600 text-white flex items-center justify-center text-lg sm:text-xl shrink-0 shadow-xs">
-              👩‍⚕️
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-[#c2185b] to-rose-600 text-white flex items-center justify-center shrink-0 shadow-xs">
+              <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
             </div>
             <div>
               <h4 class="font-bold text-xs uppercase text-[#c2185b]">Bidan Bersertifikat</h4>
@@ -37,8 +39,10 @@
           </div>
 
           <div class="bg-white/80 p-3 sm:p-3.5 rounded-2xl border border-pink-200/80 shadow-xs flex items-center space-x-3">
-            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-[#c2185b] to-rose-600 text-white flex items-center justify-center text-lg sm:text-xl shrink-0 shadow-xs">
-              🌿
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-[#c2185b] to-rose-600 text-white flex items-center justify-center shrink-0 shadow-xs">
+              <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
             </div>
             <div>
               <h4 class="font-bold text-xs uppercase text-[#c2185b]">Oil Baby Safe</h4>
@@ -53,7 +57,10 @@
             href="#services" 
             class="w-full sm:w-auto bg-gradient-to-r from-[#c2185b] to-rose-600 hover:from-pink-700 hover:to-rose-700 text-white px-7 py-3.5 rounded-full font-bold text-xs sm:text-sm shadow-lg transition transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 cursor-pointer"
           >
-            <span>✨ Lihat Daftar Layanan</span>
+            <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+            <span>Lihat Daftar Layanan</span>
           </a>
           <a 
             href="https://wa.me/6283872820966?text=Halo%20Putri%20Mom%20%26%20Baby%20Spa,%20saya%20ingin%20konsultasi%20dan%20reservasi." 
@@ -61,7 +68,10 @@
             rel="noopener noreferrer"
             class="w-full sm:w-auto bg-white hover:bg-pink-50 text-[#c2185b] border-2 border-[#c2185b] px-7 py-3.5 rounded-full font-bold text-xs sm:text-sm shadow-sm transition flex items-center justify-center space-x-2 cursor-pointer"
           >
-            <span>📱 Hubungi WhatsApp</span>
+            <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <span>Hubungi WhatsApp</span>
           </a>
         </div>
       </div>
@@ -76,7 +86,7 @@
               </span>
               <h3 class="font-luxury font-bold text-lg sm:text-xl text-[#c2185b] mt-1">Layanan Terpopuler</h3>
             </div>
-            <span class="text-2xl">💖</span>
+            <svg class="w-5 h-5 text-[#c2185b]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
           </div>
 
           <div class="space-y-3">

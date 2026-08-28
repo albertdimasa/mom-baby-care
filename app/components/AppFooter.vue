@@ -16,6 +16,16 @@
         📱 0838-7282-0966
       </a>
     </div>
+
+    <div class="pt-2">
+      <NuxtLink 
+        to="/login" 
+        class="text-[11px] font-semibold text-gray-500 hover:text-[#c2185b] hover:underline"
+      >
+        🔐 Portal Owner & Bidan Login
+      </NuxtLink>
+    </div>
+
     <p class="pt-4 border-t border-pink-100 max-w-xs mx-auto text-[11px]">
       &copy; {{ new Date().getFullYear() }} Putri Mom & Baby Spa. All rights reserved.
     </p>

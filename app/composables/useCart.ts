@@ -85,6 +85,11 @@ export const useCart = () => {
       return false
     }
 
+    // Save reservation to reservations manager
+    const { addReservation } = useReservations()
+    const total = totalCartPrice.value
+    addReservation(form.name, form.baby, form.datetime, cart.value, total)
+
     let message = `Halo Putri Mom & Baby Spa, saya ingin melakukan reservasi:\n\n`
     message += `*Nama Bunda:* ${form.name.trim()}\n`
     if (form.baby.trim()) {
@@ -93,10 +98,8 @@ export const useCart = () => {
     message += `*Jadwal:* ${form.datetime}\n\n`
     message += `*Layanan yang Dipilih:*\n`
 
-    let total = 0
     cart.value.forEach((item, idx) => {
       const sub = item.price * item.qty
-      total += sub
       message += `${idx + 1}. ${item.name} (x${item.qty}) - ${formatRupiah(sub)}\n`
     })
 
@@ -105,6 +108,11 @@ export const useCart = () => {
     const encoded = encodeURIComponent(message)
     const waUrl = `https://wa.me/6283872820966?text=${encoded}`
     window.open(waUrl, '_blank')
+
+    // Reset cart & close modal
+    cart.value = []
+    closeCartModal()
+    showToast('Reservasi berhasil dikirim ke WhatsApp!')
     return true
   }
 

@@ -5,21 +5,12 @@ export interface OwnerUser {
 }
 
 export const useAuth = () => {
-  const user = useState<OwnerUser | null>('auth_user', () => {
-    if (import.meta.client) {
-      const savedUser = localStorage.getItem('owner_user')
-      if (savedUser) {
-        try {
-          return JSON.parse(savedUser)
-        } catch (e) {
-          localStorage.removeItem('owner_user')
-        }
-      }
-    }
-    return null
+  const user = useCookie<OwnerUser | null>('owner_user', {
+    default: () => null,
+    watch: true
   })
 
-  // Synchronous sync on client side if state is null
+  // Synchronous fallback sync on client side if cookie is null but localStorage exists
   if (import.meta.client && !user.value) {
     const savedUser = localStorage.getItem('owner_user')
     if (savedUser) {

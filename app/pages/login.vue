@@ -97,6 +97,17 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  middleware: [
+    function () {
+      const { isAuthenticated } = useAuth()
+      if (isAuthenticated.value) {
+        return navigateTo('/dashboard')
+      }
+    }
+  ]
+})
+
 const { login, isAuthenticated } = useAuth()
 const username = ref('owner')
 const password = ref('123')
